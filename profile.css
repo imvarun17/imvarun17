@@ -1,0 +1,22 @@
+#intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:100vh;
+        min-height:400px;
+        
+      }
+      
+      #intro img {
+        margin-left: auto;
+        width: 400px;
+        height: 540px;
+        max-width: 100%;
+        max-height: 100%;
+        width:50%;
+        object-fit: cover;
+      }
+
+      #intro h2{
+        margin-left: 50px;
+      }
