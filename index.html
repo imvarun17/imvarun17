@@ -1,10 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>M VARUNDEV</title>
+    <style>
+      #intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:100vh;
+        min-height:400px;
+        
+      }
+      
+      #intro img {
+        margin-left: auto;
+        width: 400px;
+        height: 540px;
+        max-width: 100%;
+        max-height: 100%;
+        width:50%;
+        object-fit: cover;
+      }
+
+      #intro h2{
+        margin-left: 50px;
+      }
+      </style>
+</head>
 <body>
+    <div id = "intro">  
+      <h2 class = "display-2" style = "color:dimgray">Heyy!<br><span style = "font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:dimgrey" >I am Varun Methil</span></h2>
+      <img src = "varunbw.jpg"
+         alt = "Varun" >     
+    </div>
+    <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>About Myself</em></h3></div>
+    <p style="margin: 15px; "> 19 year old tech enthusiast from Palakkad, Kerala pursuing engineering from Amrita Viswa Vidyapeedom.<br>
+        Passionate about football, writing, movies and pop music.
+    
+    <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>Education</em></h3></div>
+        <ul class = "list-group">
+            <li class = "list-group-item">Currently at Amrita School of Engineering, Amritapuri</li>
+            <li class = "list-group-item">Higher secondary schooling at Bhavans Vidya Mandir, chithali</li>
+            <li class = "list-group-item">Early studies and high schooling at Jawahar Navodaya Vidyalaya, Palakkad</li>
+        </ul>
+        <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>Skills</em></h3></div>
+        <hr>
+        <ul>
+          <li class = "list-group-item"><strong>Programming Languages</strong><br>
+          Python,Java</li>
+          <li class = list-group-item><strong>Tools</strong><br>
+          VS Code,Solid Works,Wireshark,Matlab</li>
+          <li class = "list-group-item"><strong>Platforms</strong><br>
+          GNU/Linux,Windows</li>
+        </ul>
+        <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>Projects</em></h3></div>
+        <hr>
+        <div id="accordion">
 
-<h1>My First Heading</h1>
-
-<p>My first paragraph.</p>
-
+            <div class="card">
+              <div class="card-header">
+                <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                  Real-time Text Editor
+                </a>
+              </div>
+              <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                <div class="card-body">
+                  <ul>
+                    <li>We learnt the basics of socket programming to implement a client-server system</li>
+                    <li>The text editor application was capable of utilizing the CLI to establish connections and publish messages or edits from users/clients</li>
+                    <li>We gained an in-depth understanding of computer networks and network applications</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
+                    Domain Adaptation
+                </a>
+              </div>
+              <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                  <ul>
+                    <li>We implemented a neural network that can identify alphabets from images</li>
+                    <li>The model was made capable of handling domain shifts through training</li>
+                    <li>We got consistent and accurate result predictions on final testing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+            <div class="card">
+              <div class="card-header">
+                <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
+                    IPL Data Analysis
+                </a>
+              </div>
+              <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                  <ul>
+                    <li>Utilized the Hadoop framework and Hive to analyze the IPL dataset from past years</li>
+                    <li>Used HiveQL to run queries and get results</li>
+                    <li>Performed a comparison between SQL and HiveQL on the basis of processing speed and ability to handle large datasets</li>
+                    <li>Gained the ability to store and manipulate big data using necessary tools and systems</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        
+        <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>Organisations</em></h3></div>
+        <hr>
+        <ul>
+          <li><strong>ACM Students Chapter</strong><br>
+            Working as a member of the Free and Open Source Software in ACM Student Chapter in
+            Amrita campus.</li>
+          <li><strong>amESE Club</strong><br>
+          Working as a member for enivornment club.</li>
+        </ul>
+  
+    
+    <a href = "https://www.google.co.in" target ="_blank" class = "btn btn-secondary p- my-3";><em>Additional info</em></a>    
+    </p>
 </body>
 </html>
