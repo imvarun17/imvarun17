@@ -1,164 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>M Varundev</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #343a40;
+        scroll-behavior: smooth;
+      }
+
+      /* Intro section */
       #intro {
         display: flex;
         justify-content: center;
         align-items: center;
-        height:100vh;
-        min-height:400px;
-        
-      }
-      
-      #intro img {
-        margin-left: auto;
-        width: 400px;
-        height: 540px;
-        max-width: 100%;
-        max-height: 100%;
-        width:50%;
-        object-fit: cover;
+        height: 100vh;
+        background-color: #343a40;
+        color: #fff;
       }
 
-      #intro h2{
-        margin-left: 50px;
+      #intro h2 {
+        margin-right: 50px;
+        font-size: 3rem;
+        animation: fadeIn 2s ease-in-out;
       }
-      </style>
+
+      #intro img {
+        width: 40%;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        animation: fadeIn 2s ease-in-out;
+      }
+
+      /* Smooth fade-in animation */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      .section-title {
+        background-color: #343a40;
+        color: #fff;
+        padding: 15px;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 1px;
+        animation: slideIn 1s ease-in-out;
+      }
+
+      .card-header a {
+        color: #343a40;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .card-header a:hover {
+        color: #007bff;
+      }
+
+      .list-group-item {
+        background-color: #f8f9fa;
+      }
+
+      /* Section padding and spacing */
+      .section {
+        padding: 60px 0;
+      }
+
+      .card {
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .btn-secondary {
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .btn-secondary:hover {
+        background-color: #007bff;
+        transform: scale(1.05);
+      }
+
+      /* Slide-in animation for section titles */
+      @keyframes slideIn {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(0); }
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: #343a40;
+        color: #fff;
+      }
+    </style>
 </head>
 <body>
-    <div id = "intro">  
-      <h2 class = "display-2" style = "color:dimgray">Heyy!<br><span style = "font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color:dimgrey" >I am Varun Methil</span></h2>
-      <img src = "varunbw.jpg"
-         alt = "Varun" >     
+
+    <!-- Intro Section -->
+    <div id="intro">
+      <h2>Heyy!<br><span style="font-family: 'Cambria', serif;">I am Varun Methil</span></h2>
+      <img src="varunbw.jpg" alt="Varun">
     </div>
-    <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>About Myself</em></h3></div>
-    <p style="margin: 15px; "> 19 year old tech enthusiast from Palakkad, Kerala pursuing engineering from Amrita Viswa Vidyapeedom.<br>
-        Passionate about football, writing, movies and pop music.
-    
-    <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>Education</em></h3></div>
-        <ul class = "list-group">
-            <li class = "list-group-item">Currently at Amrita School of Engineering, Amritapuri</li>
-            <li class = "list-group-item">Higher secondary schooling at Bhavans Vidya Mandir, chithali</li>
-            <li class = "list-group-item">Early studies and high schooling at Jawahar Navodaya Vidyalaya, Palakkad</li>
-        </ul>
-        <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>Skills</em></h3></div>
-        <hr>
-        <ul>
-          <li class = "list-group-item"><strong>Programming Languages</strong><br>
-          Python,Java</li>
-          <li class = list-group-item><strong>Tools</strong><br>
-          VS Code,Solid Works,Wireshark,Matlab</li>
-          <li class = "list-group-item"><strong>Platforms</strong><br>
-          GNU/Linux,Windows</li>
-        </ul>
-        <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>Projects</em></h3></div>
-        <hr>
-        <div id="accordion">
 
-            <div class="card">
-              <div class="card-header">
-                <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
-                  Real-time Text Editor
-                </a>
-              </div>
-              <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
-                <div class="card-body">
-                  <ul>
-                    <li>We learnt the basics of socket programming to implement a client-server system</li>
-                    <li>The text editor application was capable of utilizing the CLI to establish connections and publish messages or edits from users/clients</li>
-                    <li>We gained an in-depth understanding of computer networks and network applications</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          
-            <div class="card">
-              <div class="card-header">
-                <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
-                    Domain Adaptation
-                </a>
-              </div>
-              <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
-                <div class="card-body">
-                  <ul>
-                    <li>We implemented a neural network that can identify alphabets from images</li>
-                    <li>The model was made capable of handling domain shifts through training</li>
-                    <li>We got consistent and accurate result predictions on final testing</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          
-            <div class="card">
-              <div class="card-header">
-                <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
-                    IPL Data Analysis
-                </a>
-              </div>
-              <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
-                <div class="card-body">
-                  <ul>
-                    <li>Utilized the Hadoop framework and Hive to analyze the IPL dataset from past years</li>
-                    <li>Used HiveQL to run queries and get results</li>
-                    <li>Performed a comparison between SQL and HiveQL on the basis of processing speed and ability to handle large datasets</li>
-                    <li>Gained the ability to store and manipulate big data using necessary tools and systems</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>Front-end Projects</em></h3></div>
+    <!-- About Myself Section -->
+    <div class="section">
+      <div class="section-title">About Myself</div>
+      <p class="text-center mx-auto" style="max-width: 600px;">19-year-old tech enthusiast from Palakkad, Kerala pursuing engineering from Amrita Viswa Vidyapeedom. Passionate about football, writing, movies, and pop music.</p>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <ul class="list-group mx-auto" style="max-width: 600px;">
+        <li class="list-group-item">Currently at Amrita School of Engineering, Amritapuri</li>
+        <li class="list-group-item">Higher secondary schooling at Bhavans Vidya Mandir, Chithali</li>
+        <li class="list-group-item">Early studies and high schooling at Jawahar Navodaya Vidyalaya, Palakkad</li>
+      </ul>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section">
+      <div class="section-title">Skills</div>
+      <ul class="list-group mx-auto" style="max-width: 600px;">
+        <li class="list-group-item"><strong>Programming Languages:</strong> Python, Java</li>
+        <li class="list-group-item"><strong>Tools:</strong> VS Code, Solid Works, Wireshark, Matlab</li>
+        <li class="list-group-item"><strong>Platforms:</strong> GNU/Linux, Windows</li>
+      </ul>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section">
+      <div class="section-title">Projects</div>
+      <div id="accordion" class="mx-auto" style="max-width: 600px;">
+        <div class="card">
+          <div class="card-header">
+            <a class="btn" data-bs-toggle="collapse" href="#collapseOne">Real-time Text Editor</a>
           </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Tic Tac Toe</h5>
-                  <p class="card-text">A tic-tac-toe game that can be played in both multiplayer more and against AI in the single app</p>
-                  <a href="https://imvarun17.github.io/Wordle/tic tac toe/index.html" class="btn btn-secondary">Launch</a>
-                </div>
-              </div>
+          <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+            <div class="card-body">
+              <ul>
+                <li>Implemented a client-server system using socket programming</li>
+                <li>Text editor capable of utilizing CLI to establish connections</li>
+                <li>In-depth understanding of computer networks and network applications</li>
+              </ul>
             </div>
-            <div class="col-md-4">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Photo Album</h5>
-                  <p class="card-text">A responsive photo album capable of storing photos with an inbuilt feature of editing them.</p>
-                    <a href="https://imvarun17.github.io/Wordle/photo album/index.html" class="btn btn-secondary">Launch</a>
-                    </div>
-                    </div>
-                    </div>
-                    <div class="col-md-4">
-                    <div class="card">
-                    <div class="card-body">
-                    <h5 class="card-title">Wordle</h5>
-                    <p class="card-text">Dare to give a try on today's word? Made with daily updated APIs</p>
-                    <a href="https://imvarun17.github.io/Wordle/" class="btn btn-secondary">Launch</a>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">Domain Adaptation</a>
+          </div>
+          <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              <ul>
+                <li>Implemented a neural network to identify alphabets from images</li>
+                <li>Handled domain shifts through training</li>
+                <li>Achieved consistent and accurate predictions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">IPL Data Analysis</a>
+          </div>
+          <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
+            <div class="card-body">
+              <ul>
+                <li>Analyzed IPL dataset using Hadoop and Hive</li>
+                <li>Ran queries using HiveQL</li>
+                <li>Compared SQL and HiveQL in processing speed</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class = "container-fluid p-3 my-3 bg-dark text-white"><h3><em>Organisations</em></h3></div>
-        <hr>
-        <ul>
-          <li><strong>ACM Students Chapter</strong><br>
-            Working as a member of the Free and Open Source Software in ACM Student Chapter in
-            Amrita campus.</li>
-          <li><strong>amESE Club</strong><br>
-          Working as a member for enivornment club.</li>
-        </ul>
-  
-    
-    <a href = "https://www.google.co.in" target ="_blank" class = "btn btn-secondary p- my-3";><em>Additional info</em></a>    
-    </p>
+    <!-- Front-end Projects Section -->
+    <div class="section">
+      <div class="section-title">Front-end Projects</div>
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Tic Tac Toe</h5>
+              <p class="card-text">Multiplayer or against AI Tic Tac Toe game.</p>
+              <a href="https://imvarun17.github.io/Wordle/tic-tac-toe/index.html" class="btn btn-secondary">Launch</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Photo Album</h5>
+              <p class="card-text">Responsive photo album with editing features.</p>
+              <a href="https://imvarun17.github.io/Wordle/photo-album/index.html" class="btn btn-secondary">Launch</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body text-center">
+              <h5 class="card-title">Wordle</h5>
+              <p class="card-text">Try today's word challenge with daily updated APIs.</p>
+              <a href="https://imvarun17.github.io/Wordle/" class="btn btn-secondary">Launch</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Organizations Section -->
+    <div class="section">
+      <div class="section-title">Organizations</div>
+      <ul class="list-group mx-auto" style="max-width: 600px;">
+        <li class="list-group-item"><strong>ACM Students Chapter:</strong> Member of Free and Open Source Software in ACM Student Chapter at Amrita campus.</li>
+        <li class="list-group-item"><strong>amESE Club:</strong> Member of the Environment Club.</li>
+      </ul>
+    </div>
+
+    <div class="text-center my-5">
+      <a href="https://www.google.co.in" target="_blank" class="btn btn-secondary"><em>Additional Info</em></a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
